@@ -25,7 +25,7 @@ pipeline {
 
     stage('create docker image') {
       steps {
-        sh 'docker build -t e31531469/devops947:latest .'
+        sh 'docker build -t e31531469/ethans954:latest .'
       }
     }
 
@@ -36,7 +36,7 @@ pipeline {
         
         withDockerRegistry(credentialsId: 'DockerHubCredentials', url: 'https://index.docker.io/v1/') {
             
-                sh 'docker push e31531469/devops947:latest'
+                sh 'docker push e31531469/ethans954:latest'
             
         }
       }
