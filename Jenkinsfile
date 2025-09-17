@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('scm checkout') {
       steps {
-        git branch: 'master', url: 'https://github.com/kumargaurav039/maven-project.git'
+        git branch: 'master', url: 'https://github.com/Rohit4912/maven-project.git'
       }
     }
 
@@ -15,13 +15,13 @@ pipeline {
         }
       }
     }
-    stage('build the code') {
+    /*stage('build the code') {
       steps {
         withMaven(globalMavenSettingsConfig: '', jdk: 'JDK_HOME', maven: 'MVN_HOME', mavenSettingsConfig: '', traceability: true) {
           sh 'mvn clean package'
         }
       }
-    }
+    
 /*
     stage('create docker image') {
       steps {
